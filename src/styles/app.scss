@@ -1,0 +1,165 @@
+$body-color: #fafcfd;
+$dark-title: #182233;
+$light-title: #536e92;
+$borders: #e6ebf3;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background: $body-color;
+  font-family: 'Nunito Sans', sans-serif;
+  color: $dark-title;
+  position: relative;
+}
+
+.project-title {
+  font-size: 3.6rem;
+  font-weight: bold;
+}
+
+.projects-wrapper {
+  padding: 30px;
+}
+
+.pull-right {
+  float: right;
+}
+
+.search-input {
+  border: 1px solid $borders;
+  height: 4rem;
+  width: 35rem;
+  padding: 0rem 1.5rem;
+  font-size: 1.4rem;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.sort-option-wrapper {
+  font-size: 1.5rem;
+  float: right;
+  > p {
+    margin-top: 0;
+  }
+
+  ul {
+    display: inline-flex;
+    cursor: pointer;
+    padding-left: 1.5rem;
+    > li {
+      list-style: none;
+      margin: 0 10px;
+      &.active {
+        color: #00b9f5;
+      }
+    }
+  }
+}
+
+.project-item-container {
+  border: 1px solid $borders;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 2px;
+  &:hover {
+    box-shadow: 0 5px 13px 0 rgba(0, 0, 0, 0.14);
+  }
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.project-item-content {
+  text-align: right;
+  display: inline-block;
+  width: 20%;
+}
+
+.project-by {
+  margin: 10px 0;
+  color: $light-title;
+}
+
+.project-desc {
+  margin: 10px 0;
+}
+
+.project-item-wrapper {
+  width: 80%;
+  display: inline-block;
+  > h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    > a {
+      color: $dark-title;
+    }
+  }
+}
+
+.modal-container {
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  min-height: 300px;
+  max-height: 700px;
+  width: 700px;
+  margin: 0 auto;
+  overflow: auto;
+  background: #fff;
+  z-index: 999;
+
+}
+
+.close {
+  font-size: 2.8rem;
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+}
+
+.modal-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+}
+
+.modal-header {
+  padding: 2.5rem;
+  border-bottom: 1px solid $borders;
+  > h1 {
+    margin: 0;
+  }
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-content {
+  font-size: 1.5rem;
+  padding: 2.5rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .mp-value {
+    display: inline-block;
+    width: 70%;
+  }
+
+  .mp-label {
+    text-transform: capitalize;
+    display: inline-block;
+    color: $light-title;
+    width: 30%;
+  }
+}
